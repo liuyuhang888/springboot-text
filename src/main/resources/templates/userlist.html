@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>thymeleafDemo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+<table>
+    <tr th:each="user:${userList}">
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getNickname()}"></td>
+    </tr>
+</table>
+</body>
+</html>
